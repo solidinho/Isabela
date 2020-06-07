@@ -1,0 +1,7 @@
+const Discord = require("discord.js");
+exports.run = (bot) => {
+  console.log(`${bot.user.username} Iniciou!`)
+  let activities = ["💎 Seja PREMIUM e por apenas $3 por mês, você tem benefícios exclusivos, como o comando: 'pagantes", "📝 Votando em mim, no botsparadiscord.com, você ganha F$ 500!! então, não perca tempo!", "❓ Meu prefixo é ' , meu comando de ajuda é 'ajuda", `🏡 Projeto #FicaEmCasa`, "❤ Continue sendo feliz e sorridente!", `💻 Eu estou em ${bot.guilds.cache.size} Servidores! Fiscalizando ${bot.channels.cache.size} Canais e ${bot.users.cache.size} Usuários!`, "🎨 Procuramos designer´s pra nossa bot! Entre no servidor de suporte para informações!", "❗ Encontrou Bugs? use o comando 'bug e relate para nossa equipe de suporte! você pode ganhar recompensa em F$ !", "🤵 Quem me criou foi </renatin>#9218", "📰 Visite o blog oficial da Isabela! isabelabot.blogspot.com", "🤓 Sabia que eu sou Open-Source? (https://github.com/renato425/Isabela-Open-Source)!", "🐦 Me siga no Twitter: @IsabelaBot_ofc", "🌺 Lembrando que estou na fase BETA. Ou seja, podem ser encontrados bug´s a qualquer momento!"], i = 0;
+  setInterval(() => bot.user.setActivity(`${activities[i++ % activities.length]}`, { type: "PLAYING" }), 30000)
+  bot.user.setStatus("online")
+}
